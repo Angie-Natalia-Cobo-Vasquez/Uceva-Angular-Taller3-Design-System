@@ -68,3 +68,6 @@ export interface NavbarIconConfig {
     /** Tamaño del icono en unidades `rem` */
     size: number;
 }
+
+/** Tamaños disponibles para el spinner. */
+export type SpinnerSize = 'sm' | 'normal';

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {
+  AvatarAtom,
   BadgeAtom,
   BadgeType,
   BadgeTypeText,
@@ -8,6 +9,9 @@ import {
   ButtonType,
   ContainerAtom,
   IconAtom,
+  SpinnerAtom,
+  SpinnerSize,
+  Themes,
 } from '@brejcha13320/design-system-bootstrap';
 
 @Component({
@@ -18,6 +22,8 @@ import {
     IconAtom,
     ContainerAtom,
     CommonModule,
+    AvatarAtom,
+    SpinnerAtom,
   ],
 })
 export class Atoms {
@@ -50,6 +56,17 @@ export class Atoms {
     { name: 'android', size: 4 },
     { name: 'ban', size: 5 },
   ]
+
+  avatars: { initials: string, color: Themes }[] = [
+    { initials: 'JD', color: 'primary' },
+    { initials: 'AB', color: 'success' },
+    { initials: 'MR', color: 'danger' },
+  ];
+
+  spinners: { type: Themes, size: SpinnerSize }[] = [
+    { type: 'primary', size: 'normal' },
+    { type: 'success', size: 'sm' },
+  ];
 
   onClick(idButton: string){
     alert(`Click en el Boton ${idButton}`);
