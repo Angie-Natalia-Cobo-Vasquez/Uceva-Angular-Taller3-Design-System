@@ -21,3 +21,4 @@ export { UserInfoMolecule } from './lib/presentation/molecules/user-info/user-in
 
 //Organisms
 export { NavbarOrganism } from './lib/presentation/organisms/navbar/navbar.organism';
+export { ProfileOrganism } from './lib/presentation/organisms/profile/profile.organism';

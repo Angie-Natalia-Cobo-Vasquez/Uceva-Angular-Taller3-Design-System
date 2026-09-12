@@ -1,3 +1,11 @@
 <dsb-container-atom title="Navbar" >
     <dsb-navbar-organism [navbarConfig]="navbarConfig"></dsb-navbar-organism>
 </dsb-container-atom>
+
+<dsb-container-atom title="Profile" >
+    <dsb-profile-organism
+        [userInfo]="userInfo"
+        [actions]="profileActions"
+        (actionSelected)="onProfileAction($event)">
+    </dsb-profile-organism>
+</dsb-container-atom>
