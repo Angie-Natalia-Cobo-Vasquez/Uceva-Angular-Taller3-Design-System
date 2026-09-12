@@ -1,0 +1,7 @@
+<section class="border rounded p-3 d-flex flex-column gap-3">
+    <dsb-user-info-molecule [userInfo]="userInfo"></dsb-user-info-molecule>
+    <dsb-button-group-molecule
+        [buttonsGroupData]="actions"
+        (clicker)="onActionSelected($event)">
+    </dsb-button-group-molecule>
+</section>
