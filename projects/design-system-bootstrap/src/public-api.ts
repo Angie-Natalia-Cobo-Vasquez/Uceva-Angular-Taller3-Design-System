@@ -16,6 +16,8 @@ export { SpinnerAtom } from './lib/presentation/atoms/spinner/spinner.atom';
 //Molecules
 export { NavLinkMolecule } from './lib/presentation/molecules/nav-link/nav-link.molecule';
 export { ButtonGroupMolecule } from './lib/presentation/molecules/button-group/button-group.molecule';
+export { AlertMolecule } from './lib/presentation/molecules/alert/alert.molecule';
+export { UserInfoMolecule } from './lib/presentation/molecules/user-info/user-info.molecule';
 
 //Organisms
 export { NavbarOrganism } from './lib/presentation/organisms/navbar/navbar.organism';

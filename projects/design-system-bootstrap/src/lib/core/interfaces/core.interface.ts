@@ -71,3 +71,27 @@ export interface NavbarIconConfig {
 
 /** Tamaños disponibles para el spinner. */
 export type SpinnerSize = 'sm' | 'normal';
+
+/** Datos de una alerta descartable. */
+export interface AlertData {
+  /** Identificador único de la alerta */
+  id: string;
+  /** Tipo visual de la alerta (color) */
+  type: Themes;
+  /** Icono de Bootstrap Icons mostrado junto al mensaje */
+  icon: string;
+  /** Mensaje mostrado dentro de la alerta */
+  message: string;
+}
+
+/** Datos de identidad de un usuario. */
+export interface UserInfoData {
+  /** Iniciales mostradas en el avatar */
+  initials: string;
+  /** Nombre completo del usuario */
+  name: string;
+  /** Rol o cargo del usuario */
+  role: string;
+  /** Color de fondo del avatar (opcional) */
+  avatarColor?: Themes;
+}
