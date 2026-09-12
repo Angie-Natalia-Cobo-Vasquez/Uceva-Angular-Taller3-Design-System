@@ -1,0 +1,9 @@
+<div class="alert d-flex align-items-center justify-content-between" [class]="getClass()" role="alert">
+    <div class="d-flex align-items-center gap-2">
+        <dsb-icon-atom [icon]="alertData.icon"></dsb-icon-atom>
+        <span>{{ alertData.message }}</span>
+    </div>
+    <span role="button" (click)="onClose()">
+        <dsb-icon-atom icon="x-lg" [size]="0.9"></dsb-icon-atom>
+    </span>
+</div>

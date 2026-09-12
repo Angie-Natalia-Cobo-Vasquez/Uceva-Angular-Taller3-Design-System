@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { 
+  AlertData,
+  AlertMolecule,
   ButtonGroupData, 
   ButtonGroupMolecule, 
   ContainerAtom, 
   NavLink, 
-  NavLinkMolecule 
+  NavLinkMolecule,
+  UserInfoData,
+  UserInfoMolecule,
 } from '@brejcha13320/design-system-bootstrap';
 
 @Component({
@@ -13,6 +17,8 @@ import {
     ContainerAtom,
     ButtonGroupMolecule,
     NavLinkMolecule,
+    AlertMolecule,
+    UserInfoMolecule,
   ],
 })
 export class Molecules {
@@ -33,7 +39,21 @@ export class Molecules {
     { text: 'Link 3', url: '/organisms' },
   ];
 
+  alerts: AlertData[] = [
+    { id: 'alertSuccess', type: 'success', icon: 'check-circle', message: 'Cambios guardados correctamente.' },
+    { id: 'alertWarning', type: 'warning', icon: 'exclamation-triangle', message: 'Revisa los campos antes de continuar.' },
+  ];
+
+  userInfos: UserInfoData[] = [
+  { initials: 'AC', name: 'Angie Cobo', role: 'Frontend Developer', avatarColor: 'info' },
+  { initials: 'SO', name: 'Santiago Ospina', role: 'Backend Developer', avatarColor: 'success' },
+];
+  
   onClick(idButton: string){
     alert(`Click en el Boton de Grupo ${idButton}`);
+  }
+
+  onCloseAlert(id: string){
+    alert(`Cerraste la alerta ${id}`);
   }
 }

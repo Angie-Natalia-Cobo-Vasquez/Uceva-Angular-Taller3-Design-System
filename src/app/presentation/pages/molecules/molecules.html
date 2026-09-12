@@ -9,3 +9,19 @@
     <dsb-nav-link-molecule [navLinks]="navLinks">
     </dsb-nav-link-molecule>
 </dsb-container-atom>
+
+<dsb-container-atom title="Alert" >
+    <section class="d-flex flex-column gap-2" >
+        @for(alertItem of alerts; track alertItem){
+            <dsb-alert-molecule [alertData]="alertItem" (closed)="onCloseAlert($event)"></dsb-alert-molecule>
+        }
+    </section>
+</dsb-container-atom>
+
+<dsb-container-atom title="User Info" >
+    <section class="d-flex flex-column gap-3" >
+        @for(user of userInfos; track user){
+            <dsb-user-info-molecule [userInfo]="user"></dsb-user-info-molecule>
+        }
+    </section>
+</dsb-container-atom>

@@ -1,0 +1,7 @@
+<div class="d-flex align-items-center gap-3">
+    <dsb-avatar-atom [initials]="userInfo.initials" [color]="userInfo.avatarColor ?? 'primary'"></dsb-avatar-atom>
+    <div>
+        <div class="fw-bold">{{ userInfo.name }}</div>
+        <small class="text-muted">{{ userInfo.role }}</small>
+    </div>
+</div>

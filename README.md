@@ -4,6 +4,16 @@
 
 - El objetivo del taller es practicar la creación de un sistema de diseño átomico y librerias en Angular, mediante el uso de componentes standalone.
 
+## 🧱 Estructura Atomic Design
+
+La librería organiza sus componentes en tres niveles:
+
+- **Átomos:** `IconAtom`, `BadgeAtom`, `ButtonAtom`, `ContainerAtom`, `AvatarAtom` y `SpinnerAtom`.
+- **Moléculas:** `NavLinkMolecule`, `ButtonGroupMolecule`, `AlertMolecule` y `UserInfoMolecule`.
+- **Organismos:** `NavbarOrganism` y `ProfileOrganism`.
+
+Los organismos combinan moléculas y átomos para construir secciones funcionales reutilizables. `ProfileOrganism`, por ejemplo, integra `UserInfoMolecule` y `ButtonGroupMolecule`, recibe interfaces tipadas y emite la acción seleccionada.
+
 ## 📋 Requisitos Previos
 
 Antes de iniciar, asegúrate de tener instaladas las siguientes herramientas:
@@ -39,6 +49,22 @@ y ejecutar un proyecto de prueba consumiendo la libreria ubicada en projects
 
 Cuando el servidor esté en ejecución, abre un navegador y accede a: `http://localhost:4200/`
 
+El showcase incluye ejemplos funcionales en las siguientes rutas:
+
+- `http://localhost:4200/atoms`
+- `http://localhost:4200/molecules`
+- `http://localhost:4200/organisms`
+
+Para generar la librería en `dist` y ejecutar el showcase se requieren dos terminales:
+
+```bash
+# Terminal 1
+npm run build:dev
+
+# Terminal 2
+npm start
+```
+
 ## 🧪 Pruebas Unitarias
 
 El proyecto utiliza Jest para la ejecución de pruebas unitarias.
@@ -59,6 +85,8 @@ Este modo permite ejecutar todas las pruebas unitarias del proyecto y generar un
 
 ```npm run test:coverage```
 
+La cobertura esperada del proyecto es superior al 80%.
+
 ### 📘 Generar documentación con Compodoc
 
 Este modo permite generar la documentación técnica del proyecto a partir de los comentarios JSDoc en el código fuente, facilitando la visualización de la API del Design System y sus componentes.
@@ -66,6 +94,19 @@ Este modo permite generar la documentación técnica del proyecto a partir de lo
 El comando genera un sitio estático con la documentación del proyecto, incluyendo componentes, interfaces, tipos, módulos y diagramas de dependencias.
 
 ```npm run compodoc```
+
+La documentación se genera en la carpeta `documentation/`. Esta salida está excluida del control de versiones porque se trata de un artefacto generado.
+
+## ✅ Validación completa
+
+Antes de entregar cambios, ejecuta:
+
+```bash
+npm test -- --runInBand
+npm run build
+npx ng build Angular-Standalone-Template --configuration development
+npm run compodoc
+```
 
 ## ⚙️ Generación de Archivos con Angular CLI
 

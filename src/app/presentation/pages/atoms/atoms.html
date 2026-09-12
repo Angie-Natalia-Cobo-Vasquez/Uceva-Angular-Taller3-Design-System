@@ -26,3 +26,19 @@
         }
     </section>
 </dsb-container-atom>
+
+<dsb-container-atom title="Avatar" >
+    <section class="d-flex gap-3" >
+        @for(avatar of avatars; track avatar){
+            <dsb-avatar-atom [initials]="avatar.initials" [color]="avatar.color"></dsb-avatar-atom>
+        }
+    </section>
+</dsb-container-atom>
+
+<dsb-container-atom title="Spinner" >
+    <section class="d-flex gap-3 align-items-center" >
+        @for(spinner of spinners; track spinner){
+            <dsb-spinner-atom [type]="spinner.type" [size]="spinner.size"></dsb-spinner-atom>
+        }
+    </section>
+</dsb-container-atom>
